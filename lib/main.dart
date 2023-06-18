@@ -27,7 +27,10 @@ class MyApp extends StatelessWidget {
           onPressed: () { print('Floated button pressed!'); },
         ),
         body: Center(
-          child:  ElevatedButton(onPressed: onPressed, child: const Text('Elevated', style: TextStyle(fontFamily: 'Kablammo', fontSize: 36, color: Colors.purple),)),
+          child:  ElevatedButton.icon(
+            icon: const Icon(Icons.settings, size: 36, color: Colors.purple),
+            onPressed: onPressed,
+            label: const Text('Elevated', style: TextStyle(fontFamily: 'Kablammo', fontSize: 36, color: Colors.purple),)),
         ),
       )
     );
