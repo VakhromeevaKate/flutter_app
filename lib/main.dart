@@ -3,6 +3,10 @@ import 'package:flutter/material.dart';
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
+  onPressed() {
+    print('Button pressed');
+  }
+
   @override
   Widget build(BuildContext context) {
     // Kablammo
@@ -17,15 +21,11 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         appBar: AppBar(title: const Text('Hello, world!')),
         floatingActionButton: FloatingActionButton(
-          child: const Icon(Icons.favorite_outline),
-          onPressed: () { print('Button pressed!'); },
+          child: const Icon(Icons.favorite_outline, size: 36, color: Colors.white, ),
+          onPressed: () { print('Floated button pressed!'); },
         ),
-        body: const Center(
-          child: Text('Button pressed ${0 + 1} times', style: TextStyle(
-            fontSize: 20,
-            fontFamily: 'Kablammo',
-            color: Colors.black,
-          )),
+        body: Center(
+          child:  ElevatedButton(onPressed: onPressed, child: const Text('Elevated')),
         ),
       )
     );
