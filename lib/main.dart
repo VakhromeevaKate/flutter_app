@@ -26,9 +26,12 @@ class MyApp extends StatelessWidget {
           child: const Icon(Icons.favorite, size: 36, color: Colors.purple, ),
           onPressed: () { print('Floated button pressed!'); },
         ),
-        body: const Center(
-          child: Image(
-            image: AssetImage('./assets/Gfp-quetzalcaotlus.jpg')
+        body: Center(
+          child: Container(
+            margin: const EdgeInsets.all(20),
+            padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+            color: Colors.purple,
+            child: const Image(image: AssetImage('./assets/Gfp-quetzalcaotlus.jpg')),
           ),
         ),
         /* Center(
