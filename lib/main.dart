@@ -16,16 +16,18 @@ class MyApp extends StatelessWidget {
           primary: Colors.deepOrangeAccent,
           secondary: Colors.orange,
         ),
-        textTheme: const TextTheme(bodyMedium: TextStyle(color: Colors.purple)),
+        textTheme: const TextTheme(bodyMedium: TextStyle(color: Colors.purple, fontFamily: 'Kablammo')),
       ),
       home: Scaffold(
-        appBar: AppBar(title: const Text('Hello, world!')),
+        appBar: AppBar(title: const Center(
+          child: Text('Hello, world!', style: TextStyle(color: Colors.purple, fontFamily: 'Kablammo', fontSize: 36),))
+        ),
         floatingActionButton: FloatingActionButton(
-          child: const Icon(Icons.favorite_outline, size: 36, color: Colors.white, ),
+          child: const Icon(Icons.favorite, size: 36, color: Colors.purple, ),
           onPressed: () { print('Floated button pressed!'); },
         ),
         body: Center(
-          child:  ElevatedButton(onPressed: onPressed, child: const Text('Elevated')),
+          child:  ElevatedButton(onPressed: onPressed, child: const Text('Elevated', style: TextStyle(fontFamily: 'Kablammo', fontSize: 36, color: Colors.purple),)),
         ),
       )
     );
