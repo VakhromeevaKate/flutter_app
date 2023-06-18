@@ -28,7 +28,7 @@ class MyApp extends StatelessWidget {
         ),
         body: const Center(
           child: Image(
-            image: NetworkImage('https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Moench_2339.jpg/1200px-Moench_2339.jpg')
+            image: AssetImage('./assets/Gfp-quetzalcaotlus.jpg')
           ),
         ),
         /* Center(
